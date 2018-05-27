@@ -118,7 +118,7 @@
         <configuration>
           <images>
             <image>
-              <name>claudioed/${project.build.finalName}</name>
+              <name>sensedia/${project.build.finalName}</name>
               <build>
                 <from>openjdk:latest</from>
                 <entryPoint>java -jar /application/${project.build.finalName}.jar</entryPoint>
