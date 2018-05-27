@@ -10,6 +10,6 @@ import org.springframework.stereotype.Service
 @Service
 class TeamService(private val teamRepository: TeamRepository) {
 
-    fun get(id:String) = this.teamRepository.get(id)
+    fun get(id:String) = this.teamRepository.findById(id)
 
 }

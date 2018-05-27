@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/api/matches")
 class MatchResource(private val matchService: MatchService) {
 
+    @GetMapping
+    fun select(@RequestParam("round") round: String) = this.matchService.byRound(round)
+
     @GetMapping("/{id}")
     fun get(@PathVariable("id") id: String) = this.matchService.get(id)
 

@@ -10,6 +10,6 @@ import org.springframework.stereotype.Service
 @Service
 class StadiumService(val stadiumRepository: StadiumRepository) {
 
-    fun get(id:String) = this.stadiumRepository.get(id)
+    fun get(id:String) = this.stadiumRepository.findById(id)
 
 }

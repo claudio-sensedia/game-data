@@ -13,8 +13,11 @@ To create a docker image you need a docker installation in your machine
 
 ## Infrastructure Requisites
 
-You need a rabbitmq up and running to up the service, we recommend using docker container
+You need a rabbitmq and mongoDB to up the service, we recommend using docker container
 
 The following command can help you to spin up a fresh rabbitmq container
 
 ``docker run -d --name rabbitmq -p 15672:15672 -p 5672:5672 rabbitmq:3.7.0-management-alpine``
+
+The following command can help you to spin up a fresh mongoDB container
+``docker run --name mongo -d -p 27017:27017 mongo``

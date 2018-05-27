@@ -1,0 +1,148 @@
+swagger: '2.0'
+info:
+  description: World Cup 2018 - Game Data API's
+  version: 1.0.0
+  title: World Cup 2018 API's
+host: api.airline.passenger
+basePath: /game
+schemes:
+  - https
+  - http
+paths:
+
+  '/matches/{id}':
+    get:
+      tags:
+        - matches
+      description: Find the match by id
+      summary: Get match data by id
+      parameters:
+        - name: id
+          in: path
+          description: match name
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+
+    put:
+      tags:
+        - matches
+      description: It updated the match result
+      summary: Updated the match result
+      parameters:
+        - name: id
+          in: path
+          description: match name
+          required: true
+          type: string
+        - name: result
+          in: body
+          description: Match Result data in JSON notation.
+          required: true
+          schema:
+            $ref: '#/definitions/match_result'
+      responses:
+        '200':
+          description: OK
+
+  '/stadiums/{id}':
+    get:
+      tags:
+        - stadiums
+      description: Find the stadium by id
+      summary: Get stadium data by id
+      parameters:
+        - name: id
+          in: path
+          description: stadium id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+
+  '/teams/{id}':
+    get:
+      tags:
+        - teams
+      description: Find the team by id
+      summary: Get team data by id
+      parameters:
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+
+definitions:
+
+  stadium:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      city:
+        type: string
+      lat:
+        type: integer
+      lng:
+        type: integer
+      image:
+        type: string
+
+  team:
+    type : object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      fifaCode:
+        type: string
+      iso2:
+        type: string
+      flag:
+        type: string
+      emoji:
+        type: string
+      emojiString:
+        type: string
+
+  match:
+    type : object
+    properties:
+      name:
+        type: string
+      type:
+        type: string
+      home_team:
+        type: string
+      away_team:
+        type: string
+      home_result:
+        type: string
+      away_result:
+        type: string
+      round:
+        type: string
+      stadium:
+        type: string
+      date:
+        type: string
+      finished:
+        type: boolean
+
+  match_result:
+    type : object
+    properties:
+      home_result:
+        type: string
+      away_result:
+        type: string

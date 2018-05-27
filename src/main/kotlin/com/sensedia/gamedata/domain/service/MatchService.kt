@@ -16,10 +16,16 @@ import reactor.core.publisher.Mono
 @Service
 class MatchService(private val matchRepository: MatchRepository, private val sender: MessageSender,private val messageConf: MessageConf) {
 
-    fun get(id: String) = this.matchRepository.get(id)
+    fun get(id: String) = this.matchRepository.findById(id)
+
+    fun byRound(round:String)= this.matchRepository.findByRound(round)
 
     fun changeResult(name: String, result: Result): Mono<Match> {
-        return this.matchRepository.applyResult(name, result).flatMap {
+        return this.matchRepository.findById(name).map {
+            it.copy(homeResult = result.homeResult,awayResult = result.awayResult)
+        }.flatMap {
+            this.matchRepository.save(it)
+        }.flatMap {
             this.sender.send(Triple(this.messageConf.matchExchange,this.messageConf.matchResultQueue, MatchResult(name = it.name, homeResult = it.homeResult, awayResult = it.awayResult)))
             Mono.just(it)
         }
