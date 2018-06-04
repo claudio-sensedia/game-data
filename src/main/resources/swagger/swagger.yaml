@@ -3,7 +3,7 @@ info:
   description: World Cup 2018 - Game Data API's
   version: 1.0.0
   title: World Cup 2018 API's
-host: api.airline.passenger
+host: localhost
 basePath: /game
 schemes:
   - https
@@ -24,7 +24,19 @@ paths:
           type: string
       responses:
         '200':
-          description: OK
+          description: Sucessfully returns the match.
+          schema:
+            $ref: '#/definitions/match'
+        '401':
+          description: Unauthorized.
+        '403':
+          description: Forbidden.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Error.
+        '504':
+          description: Gateway Timeout.
 
     put:
       tags:
@@ -45,7 +57,27 @@ paths:
             $ref: '#/definitions/match_result'
       responses:
         '200':
-          description: OK
+          description: Match was updated sucessfully.
+        '400':
+          description: Bad Request.
+        '401':
+          description: Unauthorized.
+        '403':
+          description: Forbidden.
+        '412':
+          description: Precondition failed.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/_errorMessage'
+        '422':
+          description: Unprocessable Entity.
+          schema:
+            $ref: '#/definitions/_errorMessage'
+        '500':
+          description: Internal Error.
+        '504':
+          description: Gateway Timeout.
 
   '/stadiums/{id}':
     get:
@@ -61,8 +93,19 @@ paths:
           type: string
       responses:
         '200':
-          description: OK
-
+          description: Sucessfully returns the stadium.
+          schema:
+            $ref: '#/definitions/stadium'
+        '401':
+          description: Unauthorized.
+        '403':
+          description: Forbidden.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Error.
+        '504':
+          description: Gateway Timeout.
   '/teams/{id}':
     get:
       tags:
@@ -77,9 +120,31 @@ paths:
           type: string
       responses:
         '200':
-          description: OK
+          description: Sucessfully returns the team.
+          schema:
+            $ref: '#/definitions/team'
+        '401':
+          description: Unauthorized.
+        '403':
+          description: Forbidden.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Error.
+        '504':
+          description: Gateway Timeout.
 
 definitions:
+
+  _errorMessage:
+    type: object
+    properties:
+      code:
+        type: string
+        description: Error code.
+      message:
+        type: string
+        description: Error message.
 
   stadium:
     type: object
