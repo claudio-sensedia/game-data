@@ -1,9 +1,15 @@
 spring:
   rabbitmq:
-    host: ${RABBITMQ_HOST}
-    port: 5672
+    host: ${RABBIT_HOST}
+    port: ${RABBIT_PORT}
+  data:
+    mongodb:
+      database: "GAME-DATA"
+      host: ${MONGO_HOST}
+      port: ${MONGO_PORT}
 server:
-  port: 8888
+  port: 7777
+
 match:
   exchange: matches
   result:
