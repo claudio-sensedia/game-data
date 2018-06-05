@@ -21,3 +21,7 @@ data class Match(@Id val name: String, val type: String, @JsonProperty("home_tea
 data class MatchResult(@NotEmpty val name:String,@NotEmpty  val homeResult: String,@NotEmpty  val awayResult: String)
 
 data class Result(@NotEmpty @JsonProperty("home_result") val homeResult: String,@NotEmpty @JsonProperty("away_result") val awayResult: String)
+
+data class MatchData(@Id val name: String, val type: String, @JsonProperty("home_team") val homeTeam: Team,
+                 @JsonProperty("away_team") val awayTeam: Team, @JsonProperty("home_result") val homeResult: String,var round:String = "group",
+                 @JsonProperty("away_result") val awayResult: String, val stadium: String, val date: String, val finished: Boolean = false)

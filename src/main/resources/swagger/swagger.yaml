@@ -10,6 +10,30 @@ schemes:
   - http
 paths:
 
+  '/matches':
+    get:
+      tags:
+        - matches
+      description: Find the matches
+      summary: Get matches data
+      responses:
+        '200':
+          description: Sucessfully returns the matches.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/match'
+        '401':
+          description: Unauthorized.
+        '403':
+          description: Forbidden.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Error.
+        '504':
+          description: Gateway Timeout.
+
   '/matches/{id}':
     get:
       tags:
@@ -188,9 +212,11 @@ definitions:
       type:
         type: string
       home_team:
-        type: string
+        type: object
+        $ref: '#/definitions/team'
       away_team:
-        type: string
+        type: object
+        $ref: '#/definitions/team'
       home_result:
         type: string
       away_result:
