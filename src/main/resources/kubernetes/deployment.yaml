@@ -5,11 +5,22 @@ metadata:
   labels:
     app: game-data
 data:
-  RABBIT_HOST: "rabbitmq"
+  RABBIT_HOST: "rabbitmq-rabbitmq"
   RABBIT_PORT: 5672
-  MONGO_HOST: "mongo"
+  MONGO_HOST: "mongo-mongodb"
   MONGO_PORT: 27017
   ENV_SPRING: "prod"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: game-data
+type: Opaque
+data:
+  MONGO_USER: c2Vuc2VkaWEtYmV0
+  MONGO_PASS: YmV0QDIwMTg=
+  RABBIT_USER: c2Vuc2VkaWEtYmV0
+  RABBIT_PASS: YmV0QDIwMTg=
 ---
 kind: Service
 apiVersion: v1
@@ -72,6 +83,26 @@ spec:
             configMapKeyRef:
               name: game-data
               key: ENV_SPRING
+        - name: RABBIT_USER
+          valueFrom:
+            secretKeyRef:
+              name: game-data
+              key: RABBIT_USER
+        - name: RABBIT_PASS
+          valueFrom:
+            secretKeyRef:
+              name: game-data
+              key: RABBIT_PASS
+        - name: MONGO_USER
+          valueFrom:
+            secretKeyRef:
+              name: game-data
+              key: MONGO_USER
+        - name: MONGO_PASS
+          valueFrom:
+            secretKeyRef:
+              name: game-data
+              key: MONGO_PASS
         ports:
         - name: http
           containerPort: 7777

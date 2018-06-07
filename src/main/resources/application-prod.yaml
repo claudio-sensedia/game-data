@@ -2,11 +2,15 @@ spring:
   rabbitmq:
     host: ${RABBIT_HOST}
     port: ${RABBIT_PORT}
+    username: ${RABBIT_USER}
+    password: ${RABBIT_PASS}
   data:
     mongodb:
       database: "GAME-DATA"
       host: ${MONGO_HOST}
       port: ${MONGO_PORT}
+      username: ${MONGO_USER}
+      password: ${MONGO_PASS}
 server:
   port: 7777
 
