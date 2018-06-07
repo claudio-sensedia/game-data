@@ -1,20 +1,20 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: game-data
+  name: "game-data"
   labels:
-    app: game-data
+    app: "game-data"
 data:
   RABBIT_HOST: "rabbitmq-rabbitmq"
-  RABBIT_PORT: 5672
+  RABBIT_PORT: "5672"
   MONGO_HOST: "mongo-mongodb"
-  MONGO_PORT: 27017
+  MONGO_PORT: "27017"
   ENV_SPRING: "prod"
 ---
 apiVersion: v1
 kind: Secret
 metadata:
-  name: game-data
+  name: "game-data"
 type: Opaque
 data:
   MONGO_USER: c2Vuc2VkaWEtYmV0
@@ -25,24 +25,22 @@ data:
 kind: Service
 apiVersion: v1
 metadata:
-  name: game-data
+  name: "game-data"
   labels:
-    app: game-data
+    app: "game-data"
 spec:
-  type: NodePort
   selector:
-    app: game-data
+    app: "game-data"
   ports:
   - name: http
     port: 7777
-    nodePort: 7777
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: game-data
+  name: "game-data"
   labels:
-    app: game-data
+    app: "game-data"
 spec:
   replicas: 1
   strategy:
@@ -50,58 +48,58 @@ spec:
   template:
     metadata:
       labels:
-        app: game-data
+        app: "game-data"
         tier: backend
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-      - name: game-data
-        image: sensedia_bet/game_data:1.0
+      - name: "game-data"
+        image: gcr.io/sensedia-bet/game_data:latest
         env:
         - name: RABBIT_HOST
           valueFrom:
             configMapKeyRef:
-              name: game-data
+              name: "game-data"
               key: RABBIT_HOST
         - name: RABBIT_PORT
           valueFrom:
             configMapKeyRef:
-              name: game-data
+              name: "game-data"
               key: RABBIT_PORT
         - name: MONGO_HOST
           valueFrom:
             configMapKeyRef:
-              name: game-data
+              name: "game-data"
               key: MONGO_HOST
         - name: MONGO_PORT
           valueFrom:
             configMapKeyRef:
-              name: game-data
+              name: "game-data"
               key: MONGO_PORT
         - name: SPRING_PROFILES_ACTIVE
           valueFrom:
             configMapKeyRef:
-              name: game-data
+              name: "game-data"
               key: ENV_SPRING
         - name: RABBIT_USER
           valueFrom:
             secretKeyRef:
-              name: game-data
+              name: "game-data"
               key: RABBIT_USER
         - name: RABBIT_PASS
           valueFrom:
             secretKeyRef:
-              name: game-data
+              name: "game-data"
               key: RABBIT_PASS
         - name: MONGO_USER
           valueFrom:
             secretKeyRef:
-              name: game-data
+              name: "game-data"
               key: MONGO_USER
         - name: MONGO_PASS
           valueFrom:
             secretKeyRef:
-              name: game-data
+              name: "game-data"
               key: MONGO_PASS
         ports:
         - name: http
