@@ -7,7 +7,7 @@ metadata:
 data:
   RABBIT_HOST: "rabbitmq-rabbitmq"
   RABBIT_PORT: "5672"
-  MONGO_HOST: "mongo-mongodb"
+  MONGO_HOST: "mongodb-mongodb"
   MONGO_PORT: "27017"
   ENV_SPRING: "prod"
 ---
@@ -43,8 +43,6 @@ metadata:
     app: "game-data"
 spec:
   replicas: 1
-  strategy:
-    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -54,7 +52,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: "game-data"
-        image: gcr.io/sensedia-bet/game_data:latest
+        image: "gcr.io/sensedia-bet/game_data:latest"
         env:
         - name: RABBIT_HOST
           valueFrom:
@@ -101,6 +99,11 @@ spec:
             secretKeyRef:
               name: "game-data"
               key: MONGO_PASS
+        - name: MATCHES
+          valueFrom:
+            configMapKeyRef:
+              name: "game-data-matches"
+              key: "MATCHES"
         ports:
         - name: http
           containerPort: 7777
@@ -110,17 +113,17 @@ spec:
             path: /actuator/health
             port: http
             scheme: HTTP
-          initialDelaySeconds: 5
-          periodSeconds: 10
+          initialDelaySeconds: 50
+          periodSeconds: 20
           successThreshold: 1
-          timeoutSeconds: 1
+          timeoutSeconds: 30
         livenessProbe:
           failureThreshold: 3
           httpGet:
             path: /actuator/health
             port: http
             scheme: HTTP
-          initialDelaySeconds: 5
-          periodSeconds: 10
+          initialDelaySeconds: 50
+          periodSeconds: 20
           successThreshold: 1
-          timeoutSeconds: 1
+          timeoutSeconds: 30

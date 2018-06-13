@@ -1,0 +1,512 @@
+apiVersion: v1
+data:
+  MATCHES: "{\n  \"stadiums\": [\n    {\n      \"id\": 1,\n      \"name\": \"Luzhniki
+    Stadium\",\n      \"city\": \"Moscow\",\n      \"lat\": 55.715765,\n      \"lng\":
+    37.5515217,\n      \"image\": \"https://upload.wikimedia.org/wikipedia/commons/e/e6/Luzhniki_Stadium%2C_Moscow.jpg\"\n
+    \   },\n    {\n      \"id\": 2,\n      \"name\": \"Otkrytiye Arena\",\n      \"city\":
+    \"Moscow\",\n      \"lat\": 55.817765,\n      \"lng\": 37.440363,\n      \"image\":
+    \"https://upload.wikimedia.org/wikipedia/commons/5/50/Stadium_Spartak_in_Moscow.jpg\"\n
+    \   },\n    {\n      \"id\": 3,\n      \"name\": \"Krestovsky Stadium\",\n      \"city\":
+    \"Saint Petersburg\",\n      \"lat\": 59.97274,\n      \"lng\": 30.221408,\n      \"image\":
+    \"https://upload.wikimedia.org/wikipedia/commons/a/ad/Spb_06-2017_img40_Krestovsky_Stadium.jpg\"\n
+    \   },\n    {\n      \"id\": 4,\n      \"name\": \"Kaliningrad Stadium\",\n      \"city\":
+    \"Kaliningrad\",\n      \"lat\": 54.698157,\n      \"lng\": 20.533859,\n      \"image\":
+    \"https://upload.wikimedia.org/wikipedia/commons/a/a4/Kaliningrad_stadium_-_2018-04-07.jpg\"\n
+    \   },\n    {\n      \"id\": 5,\n      \"name\": \"Kazan Arena\",\n      \"city\":
+    \"Kazan\",\n      \"lat\": 55.820983,\n      \"lng\": 49.160966,\n      \"image\":
+    \"https://upload.wikimedia.org/wikipedia/commons/3/3a/Kazan_Arena_08-2016.jpg\"\n
+    \   },\n    {\n      \"id\": 6,\n      \"name\": \"Nizhny Novgorod Stadium\",\n
+    \     \"city\": \"Nizhny Novgorod\",\n      \"lat\": 56.337287,\n      \"lng\":
+    43.963251,\n      \"image\": \"https://upload.wikimedia.org/wikipedia/commons/9/90/Nizhny_Novgorod_Stadium_%28March_2018%29.jpg\"\n
+    \   },\n    {\n      \"id\": 7,\n      \"name\": \"Cosmos Arena\",\n      \"city\":
+    \"Samara\",\n      \"lat\": 53.278146,\n      \"lng\": 50.238854,\n      \"image\":
+    \"http://img.fifa.com/image/upload/t_l4/d0mymt1ubl2pypmu3gn3.jpg\"\n    },\n    {\n
+    \     \"id\": 8,\n      \"name\": \"Volgograd Arena\",\n      \"city\": \"Volgograd\",\n
+    \     \"lat\": 48.734195,\n      \"lng\": 44.548345,\n      \"image\": \"https://upload.wikimedia.org/wikipedia/commons/6/61/Construction_of_Volgograd_Arena_inside_04.jpg\"\n
+    \   },\n    {\n      \"id\": 9,\n      \"name\": \"Mordovia Arena\",\n      \"city\":
+    \"Saransk\",\n      \"lat\": 54.181795,\n      \"lng\": 45.203851,\n      \"image\":
+    \"https://upload.wikimedia.org/wikipedia/commons/c/c9/%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D0%BE%D0%BD_Mordovia_arena.jpg\"\n
+    \   },\n    {\n      \"id\": 10,\n      \"name\": \"Rostov Arena\",\n      \"city\":
+    \"Rostov-on-Don\",\n      \"lat\": 47.209581,\n      \"lng\": 39.738424,\n      \"image\":
+    \"https://upload.wikimedia.org/wikipedia/commons/9/94/Rostov-Arens_%28april_2018%29_01.jpg\"\n
+    \   },\n    {\n      \"id\": 11,\n      \"name\": \"Fisht Olympic Stadium\",\n
+    \     \"city\": \"Sochi\",\n      \"lat\": 43.402011,\n      \"lng\": 39.955709,\n
+    \     \"image\": \"https://upload.wikimedia.org/wikipedia/commons/5/55/Fisht_Stadium_in_January_2018.jpg\"\n
+    \   },\n    {\n      \"id\": 12,\n      \"name\": \"Central Stadium\",\n      \"city\":
+    \"Yekaterinburg\",\n      \"lat\": 56.83249,\n      \"lng\": 60.573585,\n      \"image\":
+    \"https://upload.wikimedia.org/wikipedia/commons/d/d2/Estadio_Central_%28Ekaterinburg-arena%29.jpg\"\n
+    \   }\n  ],\n  \"tvchannels\": [\n    {\n      \"id\": 1,\n      \"name\": \"DR1\",\n
+    \     \"icon\": \"https://upload.wikimedia.org/wikipedia/commons/8/88/DR1_logo_2013.svg\",\n
+    \     \"country\": \"Denmark\",\n      \"iso2\": \"dk\",\n      \"lang\": [\n
+    \       \"da\"\n      ]\n    },\n    {\n      \"id\": 2,\n      \"name\": \"TV2\",\n
+    \     \"icon\": \"https://upload.wikimedia.org/wikipedia/commons/8/85/Danish_TV_2_logo.png\",\n
+    \     \"country\": \"Denmark\",\n      \"iso2\": \"dk\",\n      \"lang\": [\n
+    \       \"da\"\n      ]\n    },\n    {\n      \"id\": 3,\n      \"name\": \"BBC
+    UK\",\n      \"icon\": \"https://upload.wikimedia.org/wikipedia/commons/e/eb/BBC.svg\",\n
+    \     \"country\": \"UK\",\n      \"iso2\": \"en\",\n      \"lang\": [\n        \"en\"\n
+    \     ]\n    },\n    {\n      \"id\": 4,\n      \"name\": \"ITV UK\",\n      \"icon\":
+    \"https://upload.wikimedia.org/wikipedia/en/9/92/ITV_logo_2013.svg\",\n      \"country\":
+    \"UK\",\n      \"iso2\": \"en\",\n      \"lang\": [\n        \"en\"\n      ]\n
+    \   },\n    {\n      \"id\": 5,\n      \"name\": \"ITV4 UK\",\n      \"icon\":
+    \"https://upload.wikimedia.org/wikipedia/en/9/92/ITV_logo_2013.svg\",\n      \"country\":
+    \"UK\",\n      \"iso2\": \"en\",\n      \"lang\": [\n        \"en\"\n      ]\n
+    \   },\n    {\n      \"id\": 6,\n      \"name\": \"Cuatro\",\n      \"icon\":
+    \"https://upload.wikimedia.org/wikipedia/commons/f/f8/Logotipo_de_Cuatro.svg\",\n
+    \     \"country\": \"Spain\",\n      \"iso2\": \"es\",\n      \"lang\": [\n        \"es\"\n
+    \     ]\n    },\n    {\n      \"id\": 7,\n      \"name\": \"Telecinco\",\n      \"icon\":
+    \"https://upload.wikimedia.org/wikipedia/commons/7/75/Telecinco_2012.png\",\n
+    \     \"country\": \"Spain\",\n      \"iso2\": \"es\",\n      \"lang\": [\n        \"es\"\n
+    \     ]\n    },\n    {\n      \"id\": 8,\n      \"name\": \"Globo\",\n      \"icon\":
+    \"https://upload.wikimedia.org/wikipedia/pt/2/22/Logotipo_da_Rede_Globo.png\",\n
+    \     \"country\": \"Brazil\",\n      \"iso2\": \"br\",\n      \"lang\": [\n        \"pt-br\"\n
+    \     ]\n    },\n    {\n      \"id\": 9,\n      \"name\": \"SportTV\",\n      \"icon\":
+    \"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/SporTV_2017_logo.svg/692px-SporTV_2017_logo.svg.png\",\n
+    \     \"country\": \"Brazil\",\n      \"iso2\": \"br\",\n      \"lang\": [\n        \"pt-br\"\n
+    \     ]\n    },\n    {\n      \"id\": 10,\n      \"name\": \"SportTV2\",\n      \"icon\":
+    \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/SporTV_2_2017_logo.svg/664px-SporTV_2_2017_logo.svg.png\",\n
+    \     \"country\": \"Brazil\",\n      \"iso2\": \"br\",\n      \"lang\": [\n        \"pt-br\"\n
+    \     ]\n    },\n    {\n      \"id\": 11,\n      \"name\": \"SportTV3\",\n      \"icon\":
+    \"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/SporTV_3_2017_logo.svg/703px-SporTV_3_2017_logo.svg.png\",\n
+    \     \"country\": \"Brazil\",\n      \"iso2\": \"br\",\n      \"lang\": [\n        \"pt-br\"\n
+    \     ]\n    }\n  ],\n  \"teams\": [\n    {\n      \"id\": 1,\n      \"name\":
+    \"Russia\",\n      \"fifaCode\": \"RUS\",\n      \"iso2\": \"ru\",\n      \"flag\":
+    \"https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/900px-Flag_of_Russia.png\",\n
+    \     \"emoji\": \"flag-ru\",\n      \"emojiString\": \"\U0001F1F7\U0001F1FA\"\n
+    \   },\n    {\n      \"id\": 2,\n      \"name\": \"Saudi Arabia\",\n      \"fifaCode\":
+    \"KSA\",\n      \"iso2\": \"sa\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/750px-Flag_of_Saudi_Arabia.png\",\n
+    \     \"emoji\": \"flag-sa\",\n      \"emojiString\": \"\U0001F1F8\U0001F1E6\"\n
+    \   },\n    {\n      \"id\": 3,\n      \"name\": \"Egypt\",\n      \"fifaCode\":
+    \"EGY\",\n      \"iso2\": \"eg\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/900px-Flag_of_Egypt.png\",\n
+    \     \"emoji\": \"flag-eg\",\n      \"emojiString\": \"\U0001F1EA\U0001F1EC\"\n
+    \   },\n    {\n      \"id\": 4,\n      \"name\": \"Uruguay\",\n      \"fifaCode\":
+    \"URU\",\n      \"iso2\": \"uy\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/900px-Flag_of_Uruguay.png\",\n
+    \     \"emoji\": \"flag-uy\",\n      \"emojiString\": \"\U0001F1FA\U0001F1FE\"\n
+    \   },\n    {\n      \"id\": 5,\n      \"name\": \"Portugal\",\n      \"fifaCode\":
+    \"POR\",\n      \"iso2\": \"pt\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/600px-Flag_of_Portugal.png\",\n
+    \     \"emoji\": \"flag-pt\",\n      \"emojiString\": \"\U0001F1F5\U0001F1F9\"\n
+    \   },\n    {\n      \"id\": 6,\n      \"name\": \"Spain\",\n      \"fifaCode\":
+    \"ESP\",\n      \"iso2\": \"es\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.png\",\n
+    \     \"emoji\": \"flag-es\",\n      \"emojiString\": \"\U0001F1EA\U0001F1F8\"\n
+    \   },\n    {\n      \"id\": 7,\n      \"name\": \"Morocco\",\n      \"fifaCode\":
+    \"MAR\",\n      \"iso2\": \"ma\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/900px-Flag_of_Morocco.png\",\n
+    \     \"emoji\": \"flag-ma\",\n      \"emojiString\": \"\U0001F1F2\U0001F1E6\"\n
+    \   },\n    {\n      \"id\": 8,\n      \"name\": \"Iran\",\n      \"fifaCode\":
+    \"IRN\",\n      \"iso2\": \"ir\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/630px-Flag_of_Iran.png\",\n
+    \     \"emoji\": \"flag-ir\",\n      \"emojiString\": \"\U0001F1EE\U0001F1F7\"\n
+    \   },\n    {\n      \"id\": 9,\n      \"name\": \"France\",\n      \"fifaCode\":
+    \"FRA\",\n      \"iso2\": \"fr\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/900px-Flag_of_France.png\",\n
+    \     \"emoji\": \"flag-fr\",\n      \"emojiString\": \"\U0001F1EB\U0001F1F7\"\n
+    \   },\n    {\n      \"id\": 10,\n      \"name\": \"Australia\",\n      \"fifaCode\":
+    \"AUS\",\n      \"iso2\": \"au\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1280px-Flag_of_Australia_%28converted%29.png\",\n
+    \     \"emoji\": \"flag-au\",\n      \"emojiString\": \"\U0001F1E6\U0001F1FA\"\n
+    \   },\n    {\n      \"id\": 11,\n      \"name\": \"Peru\",\n      \"fifaCode\":
+    \"PER\",\n      \"iso2\": \"pe\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_Peru_%28state%29.svg/900px-Flag_of_Peru_%28state%29.png\",\n
+    \     \"emoji\": \"flag-pe\",\n      \"emojiString\": \"\U0001F1F5\U0001F1EA\"\n
+    \   },\n    {\n      \"id\": 12,\n      \"name\": \"Denmark\",\n      \"fifaCode\":
+    \"DEN\",\n      \"iso2\": \"dk\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/740px-Flag_of_Denmark.png\",\n
+    \     \"emoji\": \"flag-dk\",\n      \"emojiString\": \"\U0001F1E9\U0001F1F0\"\n
+    \   },\n    {\n      \"id\": 13,\n      \"name\": \"Argentina\",\n      \"fifaCode\":
+    \"ARG\",\n      \"iso2\": \"ar\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/800px-Flag_of_Argentina.png\",\n
+    \     \"emoji\": \"flag-ar\",\n      \"emojiString\": \"\U0001F1E6\U0001F1F7\"\n
+    \   },\n    {\n      \"id\": 14,\n      \"name\": \"Iceland\",\n      \"fifaCode\":
+    \"ISL\",\n      \"iso2\": \"is\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/800px-Flag_of_Iceland.png\",\n
+    \     \"emoji\": \"flag-is\",\n      \"emojiString\": \"\U0001F1EE\U0001F1F8\"\n
+    \   },\n    {\n      \"id\": 15,\n      \"name\": \"Croatia\",\n      \"fifaCode\":
+    \"CRO\",\n      \"iso2\": \"hr\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/800px-Flag_of_Croatia.png\",\n
+    \     \"emoji\": \"flag-hr\",\n      \"emojiString\": \"\U0001F1ED\U0001F1F7\"\n
+    \   },\n    {\n      \"id\": 16,\n      \"name\": \"Nigeria\",\n      \"fifaCode\":
+    \"NGA\",\n      \"iso2\": \"ng\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/800px-Flag_of_Nigeria.png\",\n
+    \     \"emoji\": \"flag-ng\",\n      \"emojiString\": \"\U0001F1F3\U0001F1EC\"\n
+    \   },\n    {\n      \"id\": 17,\n      \"name\": \"Brazil\",\n      \"fifaCode\":
+    \"BRA\",\n      \"iso2\": \"br\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/720px-Flag_of_Brazil.png\",\n
+    \     \"emoji\": \"flag-br\",\n      \"emojiString\": \"\U0001F1E7\U0001F1F7\"\n
+    \   },\n    {\n      \"id\": 18,\n      \"name\": \"Switzerland\",\n      \"fifaCode\":
+    \"SUI\",\n      \"iso2\": \"ch\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/320px-Flag_of_Switzerland_%28Pantone%29.png\",\n
+    \     \"emoji\": \"flag-ch\",\n      \"emojiString\": \"\U0001F1E8\U0001F1ED\"\n
+    \   },\n    {\n      \"id\": 19,\n      \"name\": \"Costa Rica\",\n      \"fifaCode\":
+    \"CRC\",\n      \"iso2\": \"cr\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Costa_Rica_%28state%29.svg/833px-Flag_of_Costa_Rica_%28state%29.png\",\n
+    \     \"emoji\": \"flag-cr\",\n      \"emojiString\": \"\U0001F1E8\U0001F1F7\"\n
+    \   },\n    {\n      \"id\": 20,\n      \"name\": \"Serbia\",\n      \"fifaCode\":
+    \"SRB\",\n      \"iso2\": \"rs\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1350px-Flag_of_Serbia.png\",\n
+    \     \"emoji\": \"flag-rs\",\n      \"emojiString\": \"\U0001F1F7\U0001F1F8\"\n
+    \   },\n    {\n      \"id\": 21,\n      \"name\": \"Germany\",\n      \"fifaCode\":
+    \"GER\",\n      \"iso2\": \"de\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/800px-Flag_of_Germany.png\",\n
+    \     \"emoji\": \"flag-de\",\n      \"emojiString\": \"\U0001F1E9\U0001F1EA\"\n
+    \   },\n    {\n      \"id\": 22,\n      \"name\": \"Mexico\",\n      \"fifaCode\":
+    \"MEX\",\n      \"iso2\": \"mx\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/800px-Flag_of_Mexico.png\",\n
+    \     \"emoji\": \"flag-mx\",\n      \"emojiString\": \"\U0001F1F2\U0001F1FD\"\n
+    \   },\n    {\n      \"id\": 23,\n      \"name\": \"Sweden\",\n      \"fifaCode\":
+    \"SWE\",\n      \"iso2\": \"se\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1600px-Flag_of_Sweden.png\",\n
+    \     \"emoji\": \"flag-se\",\n      \"emojiString\": \"\U0001F1F8\U0001F1EA\"\n
+    \   },\n    {\n      \"id\": 24,\n      \"name\": \"South Korea\",\n      \"fifaCode\":
+    \"KOR\",\n      \"iso2\": \"kr\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/900px-Flag_of_South_Korea.png\",\n
+    \     \"emoji\": \"flag-kr\",\n      \"emojiString\": \"\U0001F1F0\U0001F1F7\"\n
+    \   },\n    {\n      \"id\": 25,\n      \"name\": \"Belgium\",\n      \"fifaCode\":
+    \"BEL\",\n      \"iso2\": \"be\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/450px-Flag_of_Belgium.png\",\n
+    \     \"emoji\": \"flag-be\",\n      \"emojiString\": \"\U0001F1E7\U0001F1EA\"\n
+    \   },\n    {\n      \"id\": 26,\n      \"name\": \"Panama\",\n      \"fifaCode\":
+    \"PAN\",\n      \"iso2\": \"pa\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/450px-Flag_of_Panama.png\",\n
+    \     \"emoji\": \"flag-pa\",\n      \"emojiString\": \"\U0001F1F5\U0001F1E6\"\n
+    \   },\n    {\n      \"id\": 27,\n      \"name\": \"Tunisia\",\n      \"fifaCode\":
+    \"TUN\",\n      \"iso2\": \"tn\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/1200px-Flag_of_Tunisia.png\",\n
+    \     \"emoji\": \"flag-tn\",\n      \"emojiString\": \"\U0001F1F9\U0001F1F3\"\n
+    \   },\n    {\n      \"id\": 28,\n      \"name\": \"England\",\n      \"fifaCode\":
+    \"ENG\",\n      \"iso2\": \"gb-eng\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png\",\n
+    \     \"emoji\": \"flag-england\",\n      \"emojiString\": \"\U0001F3F4\U000E0067\U000E0062\U000E0065\U000E006E\U000E0067\U000E007F\"\n
+    \   },\n    {\n      \"id\": 29,\n      \"name\": \"Poland\",\n      \"fifaCode\":
+    \"POL\",\n      \"iso2\": \"pl\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1280px-Flag_of_Poland.png\",\n
+    \     \"emoji\": \"flag-pl\",\n      \"emojiString\": \"\U0001F1F5\U0001F1F1\"\n
+    \   },\n    {\n      \"id\": 30,\n      \"name\": \"Senegal\",\n      \"fifaCode\":
+    \"SEN\",\n      \"iso2\": \"sn\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg\",\n
+    \     \"emoji\": \"flag-sn\",\n      \"emojiString\": \"\U0001F1F8\U0001F1F3\"\n
+    \   },\n    {\n      \"id\": 31,\n      \"name\": \"Colombia\",\n      \"fifaCode\":
+    \"COL\",\n      \"iso2\": \"co\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/450px-Flag_of_Colombia.png\",\n
+    \     \"emoji\": \"flag-co\",\n      \"emojiString\": \"\U0001F1E8\U0001F1F4\"\n
+    \   },\n    {\n      \"id\": 32,\n      \"name\": \"Japan\",\n      \"fifaCode\":
+    \"JPN\",\n      \"iso2\": \"jp\",\n      \"flag\": \"https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/900px-Flag_of_Japan.png\",\n
+    \     \"emoji\": \"flag-jp\",\n      \"emojiString\": \"\U0001F1EF\U0001F1F5\"\n
+    \   }\n  ],\n  \"groups\": {\n    \"a\": {\n      \"name\": \"Group A\",\n      \"winner\":
+    \"\",\n      \"runnerup\": \"\",\n      \"matches\": [\n        {\n          \"name\":
+    1,\n          \"type\": \"group\",\n          \"home_team\": 1,\n          \"away_team\":
+    2,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-14T18:00:00+03:00\",\n          \"stadium\": 1,\n          \"channels\":
+    [\n            4,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 1\n        },\n        {\n          \"name\": 2,\n          \"type\":
+    \"group\",\n          \"home_team\": 3,\n          \"away_team\": 4,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-15T17:00:00+05:00\",\n
+    \         \"stadium\": 12,\n          \"channels\": [\n            3,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 1\n        },\n
+    \       {\n          \"name\": 17,\n          \"type\": \"group\",\n          \"home_team\":
+    1,\n          \"away_team\": 3,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-19T21:00:00+03:00\",\n          \"stadium\":
+    3,\n          \"channels\": [\n            3,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 2\n        },\n        {\n          \"name\":
+    18,\n          \"type\": \"group\",\n          \"home_team\": 4,\n          \"away_team\":
+    2,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-20T18:00:00+03:00\",\n          \"stadium\": 10,\n          \"channels\":
+    [\n            3,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 2\n        },\n        {\n          \"name\": 33,\n          \"type\":
+    \"group\",\n          \"home_team\": 4,\n          \"away_team\": 1,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-25T18:00:00+04:00\",\n
+    \         \"stadium\": 7,\n          \"channels\": [\n            4,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 3\n        },\n
+    \       {\n          \"name\": 34,\n          \"type\": \"group\",\n          \"home_team\":
+    2,\n          \"away_team\": 3,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-25T17:00:00+03:00\",\n          \"stadium\":
+    8,\n          \"channels\": [\n            5,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 3\n        }\n      ]\n    },\n    \"b\": {\n
+    \     \"name\": \"Group B\",\n      \"winner\": \"\",\n      \"runnerup\": \"\",\n
+    \     \"matches\": [\n        {\n          \"name\": 3,\n          \"type\": \"group\",\n
+    \         \"home_team\": 5,\n          \"away_team\": 6,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-15T21:00:00+03:00\",\n
+    \         \"stadium\": 11,\n          \"channels\": [\n            3,\n            7\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 1\n        },\n
+    \       {\n          \"name\": 4,\n          \"type\": \"group\",\n          \"home_team\":
+    7,\n          \"away_team\": 8,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-15T18:00:00+03:00\",\n          \"stadium\":
+    3,\n          \"channels\": [\n            4,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 1\n        },\n        {\n          \"name\":
+    19,\n          \"type\": \"group\",\n          \"home_team\": 5,\n          \"away_team\":
+    7,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-20T15:00:00+03:00\",\n          \"stadium\": 1,\n          \"channels\":
+    [\n            3,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 2\n        },\n        {\n          \"name\": 20,\n          \"type\":
+    \"group\",\n          \"home_team\": 8,\n          \"away_team\": 6,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-20T21:00:00+03:00\",\n
+    \         \"stadium\": 5,\n          \"channels\": [\n            4,\n            7\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 2\n        },\n
+    \       {\n          \"name\": 35,\n          \"type\": \"group\",\n          \"home_team\":
+    8,\n          \"away_team\": 5,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-25T21:00:00+03:00\",\n          \"stadium\":
+    9,\n          \"channels\": [\n            3,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 3\n        },\n        {\n          \"name\":
+    36,\n          \"type\": \"group\",\n          \"home_team\": 6,\n          \"away_team\":
+    7,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-25T20:00:00+02:00\",\n          \"stadium\": 4,\n          \"channels\":
+    [\n            3,\n            7\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 3\n        }\n      ]\n    },\n    \"c\": {\n      \"name\":
+    \"Group C\",\n      \"winner\": \"\",\n      \"runnerup\": \"\",\n      \"matches\":
+    [\n        {\n          \"name\": 5,\n          \"type\": \"group\",\n          \"home_team\":
+    9,\n          \"away_team\": 10,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-16T13:00:00+03:00\",\n          \"stadium\":
+    5,\n          \"channels\": [\n            3,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 1\n        },\n        {\n          \"name\":
+    6,\n          \"type\": \"group\",\n          \"home_team\": 11,\n          \"away_team\":
+    12,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-16T19:00:00+03:00\",\n          \"stadium\": 9,\n          \"channels\":
+    [\n            3,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 1\n        },\n        {\n          \"name\": 21,\n          \"type\":
+    \"group\",\n          \"home_team\": 9,\n          \"away_team\": 11,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-21T20:00:00+05:00\",\n
+    \         \"stadium\": 12,\n          \"channels\": [\n            4,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 2\n        },\n
+    \       {\n          \"name\": 22,\n          \"type\": \"group\",\n          \"home_team\":
+    12,\n          \"away_team\": 10,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-21T16:00:00+04:00\",\n          \"stadium\":
+    7,\n          \"channels\": [\n            4,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 2\n        },\n        {\n          \"name\":
+    37,\n          \"type\": \"group\",\n          \"home_team\": 12,\n          \"away_team\":
+    9,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-26T17:00:00+03:00\",\n          \"stadium\": 1,\n          \"channels\":
+    [\n            4,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 3\n        },\n        {\n          \"name\": 38,\n          \"type\":
+    \"group\",\n          \"home_team\": 10,\n          \"away_team\": 11,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-26T17:00:00+02:00\",\n
+    \         \"stadium\": 11,\n          \"channels\": [\n            5,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 3\n        }\n
+    \     ]\n    },\n    \"d\": {\n      \"name\": \"Group D\",\n      \"winner\":
+    \"\",\n      \"runnerup\": \"\",\n      \"matches\": [\n        {\n          \"name\":
+    7,\n          \"type\": \"group\",\n          \"home_team\": 13,\n          \"away_team\":
+    14,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-16T16:00:00+03:00\",\n          \"stadium\": 2,\n          \"channels\":
+    [\n            4,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 1\n        },\n        {\n          \"name\": 8,\n          \"type\":
+    \"group\",\n          \"home_team\": 15,\n          \"away_team\": 16,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-16T21:00:00+02:00\",\n
+    \         \"stadium\": 4,\n          \"channels\": [\n            4,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 1\n        },\n
+    \       {\n          \"name\": 23,\n          \"type\": \"group\",\n          \"home_team\":
+    13,\n          \"away_team\": 15,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-21T21:00:00+03:00\",\n          \"stadium\":
+    6,\n          \"channels\": [\n            3,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 2\n        },\n        {\n          \"name\":
+    24,\n          \"type\": \"group\",\n          \"home_team\": 16,\n          \"away_team\":
+    14,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-22T18:00:00+03:00\",\n          \"stadium\": 8,\n          \"channels\":
+    [\n            3,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 2\n        },\n        {\n          \"name\": 39,\n          \"type\":
+    \"group\",\n          \"home_team\": 16,\n          \"away_team\": 13,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-26T21:00:00+03:00\",\n
+    \         \"stadium\": 3,\n          \"channels\": [\n            3,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 3\n        },\n
+    \       {\n          \"name\": 40,\n          \"type\": \"group\",\n          \"home_team\":
+    14,\n          \"away_team\": 15,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-26T21:00:00+03:00\",\n          \"stadium\":
+    10,\n          \"channels\": [\n            3,\n            6\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 3\n        }\n      ]\n
+    \   },\n    \"e\": {\n      \"name\": \"Group E\",\n      \"winner\": \"\",\n
+    \     \"runnerup\": \"\",\n      \"matches\": [\n        {\n          \"name\":
+    9,\n          \"type\": \"group\",\n          \"home_team\": 17,\n          \"away_team\":
+    18,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-17T21:00:00+03:00\",\n          \"stadium\": 10,\n          \"channels\":
+    [\n            4,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 1\n        },\n        {\n          \"name\": 10,\n          \"type\":
+    \"group\",\n          \"home_team\": 19,\n          \"away_team\": 20,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-17T16:00:00+04:00\",\n
+    \         \"stadium\": 7,\n          \"channels\": [\n            4,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 1\n        },\n
+    \       {\n          \"name\": 25,\n          \"type\": \"group\",\n          \"home_team\":
+    17,\n          \"away_team\": 19,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-22T15:00:00+03:00\",\n          \"stadium\":
+    3,\n          \"channels\": [\n            4,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 2\n        },\n        {\n          \"name\":
+    26,\n          \"type\": \"group\",\n          \"home_team\": 20,\n          \"away_team\":
+    18,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-22T20:00:00+02:00\",\n          \"stadium\": 4,\n          \"channels\":
+    [\n            3,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 2\n        },\n        {\n          \"name\": 41,\n          \"type\":
+    \"group\",\n          \"home_team\": 20,\n          \"away_team\": 17,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-27T21:00:00+03:00\",\n
+    \         \"stadium\": 2,\n          \"channels\": [\n            4,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 3\n        },\n
+    \       {\n          \"name\": 42,\n          \"type\": \"group\",\n          \"home_team\":
+    18,\n          \"away_team\": 19,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-27T21:00:00+03:00\",\n          \"stadium\":
+    6,\n          \"channels\": [\n            5,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 3\n        }\n      ]\n    },\n    \"f\": {\n
+    \     \"name\": \"Group F\",\n      \"winner\": \"\",\n      \"runnerup\": \"\",\n
+    \     \"matches\": [\n        {\n          \"name\": 11,\n          \"type\":
+    \"group\",\n          \"home_team\": 21,\n          \"away_team\": 22,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-17T18:00:00+03:00\",\n
+    \         \"stadium\": 1,\n          \"channels\": [\n            3,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 1\n        },\n
+    \       {\n          \"name\": 12,\n          \"type\": \"group\",\n          \"home_team\":
+    23,\n          \"away_team\": 24,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-18T15:00:00+03:00\",\n          \"stadium\":
+    6,\n          \"channels\": [\n            4,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 1\n        },\n        {\n          \"name\":
+    27,\n          \"type\": \"group\",\n          \"home_team\": 21,\n          \"away_team\":
+    23,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-23T21:00:00+03:00\",\n          \"stadium\": 11,\n          \"channels\":
+    [\n            4,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 2\n        },\n        {\n          \"name\": 28,\n          \"type\":
+    \"group\",\n          \"home_team\": 24,\n          \"away_team\": 22,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-23T18:00:00+03:00\",\n
+    \         \"stadium\": 10,\n          \"channels\": [\n            4,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 2\n        },\n
+    \       {\n          \"name\": 43,\n          \"type\": \"group\",\n          \"home_team\":
+    24,\n          \"away_team\": 21,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-27T17:00:00+03:00\",\n          \"stadium\":
+    5,\n          \"channels\": [\n            3,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 3\n        },\n        {\n          \"name\":
+    44,\n          \"type\": \"group\",\n          \"home_team\": 22,\n          \"away_team\":
+    23,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-27T19:00:00+05:00\",\n          \"stadium\": 12,\n          \"channels\":
+    [\n            3,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 3\n        }\n      ]\n    },\n    \"g\": {\n      \"name\":
+    \"Group G\",\n      \"winner\": \"\",\n      \"runnerup\": \"\",\n      \"matches\":
+    [\n        {\n          \"name\": 13,\n          \"type\": \"group\",\n          \"home_team\":
+    25,\n          \"away_team\": 26,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-18T18:00:00+03:00\",\n          \"stadium\":
+    11,\n          \"channels\": [\n            3,\n            6\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 1\n        },\n        {\n
+    \         \"name\": 14,\n          \"type\": \"group\",\n          \"home_team\":
+    27,\n          \"away_team\": 28,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-18T21:00:00+03:00\",\n          \"stadium\":
+    8,\n          \"channels\": [\n            3,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 1\n        },\n        {\n          \"name\":
+    29,\n          \"type\": \"group\",\n          \"home_team\": 25,\n          \"away_team\":
+    27,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-23T15:00:00+03:00\",\n          \"stadium\": 2,\n          \"channels\":
+    [\n            3,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 2\n        },\n        {\n          \"name\": 30,\n          \"type\":
+    \"group\",\n          \"home_team\": 28,\n          \"away_team\": 26,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-24T15:00:00+03:00\",\n
+    \         \"stadium\": 6,\n          \"channels\": [\n            3,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 2\n        },\n
+    \       {\n          \"name\": 45,\n          \"type\": \"group\",\n          \"home_team\":
+    28,\n          \"away_team\": 25,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-28T20:00:00+02:00\",\n          \"stadium\":
+    4,\n          \"channels\": [\n            4,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 3\n        },\n        {\n          \"name\":
+    46,\n          \"type\": \"group\",\n          \"home_team\": 26,\n          \"away_team\":
+    27,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-28T21:00:00+03:00\",\n          \"stadium\": 9,\n          \"channels\":
+    [\n            5,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 3\n        }\n      ]\n    },\n    \"h\": {\n      \"name\":
+    \"Group H\",\n      \"winner\": \"\",\n      \"runnerup\": \"\",\n      \"matches\":
+    [\n        {\n          \"name\": 15,\n          \"type\": \"group\",\n          \"home_team\":
+    29,\n          \"away_team\": 30,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-19T18:00:00+03:00\",\n          \"stadium\":
+    2,\n          \"channels\": [\n            4,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 1\n        },\n        {\n          \"name\":
+    16,\n          \"type\": \"group\",\n          \"home_team\": 31,\n          \"away_team\":
+    32,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-19T15:00:00+03:00\",\n          \"stadium\": 9,\n          \"channels\":
+    [\n            3,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 1\n        },\n        {\n          \"name\": 31,\n          \"type\":
+    \"group\",\n          \"home_team\": 29,\n          \"away_team\": 31,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"date\": \"2018-06-24T20:00:00+05:00\",\n
+    \         \"stadium\": 5,\n          \"channels\": [\n            4,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 2\n        },\n
+    \       {\n          \"name\": 32,\n          \"type\": \"group\",\n          \"home_team\":
+    32,\n          \"away_team\": 30,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-24T21:00:00+03:00\",\n          \"stadium\":
+    12,\n          \"channels\": [\n            3,\n            6\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 2\n        },\n        {\n
+    \         \"name\": 47,\n          \"type\": \"group\",\n          \"home_team\":
+    32,\n          \"away_team\": 29,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"date\": \"2018-06-28T17:00:00+03:00\",\n          \"stadium\":
+    8,\n          \"channels\": [\n            3,\n            6\n          ],\n          \"finished\":
+    false,\n          \"matchday\": 3\n        },\n        {\n          \"name\":
+    48,\n          \"type\": \"group\",\n          \"home_team\": 30,\n          \"away_team\":
+    31,\n          \"home_result\": \"\",\n          \"away_result\": \"\",\n          \"date\":
+    \"2018-06-28T18:00:00+04:00\",\n          \"stadium\": 7,\n          \"channels\":
+    [\n            3,\n            6\n          ],\n          \"finished\": false,\n
+    \         \"matchday\": 3\n        }\n      ]\n    }\n  },\n  \"knockout\": {\n
+    \   \"round_16\": {\n      \"name\": \"Round of 16\",\n      \"matches\": [\n
+    \       {\n          \"name\": 49,\n          \"type\": \"qualified\",\n          \"home_team\":
+    \"winner_a\",\n          \"away_team\": \"runner_b\",\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\":
+    \"\",\n          \"winner\": \"\",\n          \"date\": \"2018-06-30T17:00:00+03:00\",\n
+    \         \"stadium\": 11,\n          \"channels\": [\n            4\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 4\n        },\n        {\n
+    \         \"name\": 50,\n          \"type\": \"qualified\",\n          \"home_team\":
+    \"winner_c\",\n          \"away_team\": \"runner_d\",\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\":
+    \"\",\n          \"winner\": \"\",\n          \"date\": \"2018-06-30T21:00:00+03:00\",\n
+    \         \"stadium\": 5,\n          \"channels\": [\n            4,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 4\n        },\n
+    \       {\n          \"name\": 51,\n          \"type\": \"qualified\",\n          \"home_team\":
+    \"winner_b\",\n          \"away_team\": \"runner_a\",\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\":
+    \"\",\n          \"winner\": \"\",\n          \"date\": \"2018-07-01T17:00:00+03:00\",\n
+    \         \"stadium\": 1,\n          \"channels\": [\n            3\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 4\n        },\n        {\n
+    \         \"name\": 52,\n          \"type\": \"qualified\",\n          \"home_team\":
+    \"winner_d\",\n          \"away_team\": \"runner_c\",\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\":
+    \"\",\n          \"winner\": \"\",\n          \"date\": \"2018-07-01T21:00:00+03:00\",\n
+    \         \"stadium\": 6,\n          \"channels\": [\n            4,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 4\n        },\n
+    \       {\n          \"name\": 53,\n          \"type\": \"qualified\",\n          \"home_team\":
+    \"winner_e\",\n          \"away_team\": \"runner_f\",\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\":
+    \"\",\n          \"winner\": \"\",\n          \"date\": \"2018-07-02T18:00:00+04:00\",\n
+    \         \"stadium\": 7,\n          \"channels\": [\n            3,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 4\n        },\n
+    \       {\n          \"name\": 54,\n          \"type\": \"qualified\",\n          \"home_team\":
+    \"winner_g\",\n          \"away_team\": \"runner_h\",\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\":
+    \"\",\n          \"winner\": \"\",\n          \"date\": \"2018-07-02T21:00:00+03:00\",\n
+    \         \"stadium\": 10,\n          \"channels\": [\n            3,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 4\n        },\n
+    \       {\n          \"name\": 55,\n          \"type\": \"qualified\",\n          \"home_team\":
+    \"winner_f\",\n          \"away_team\": \"runner_e\",\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\":
+    \"\",\n          \"winner\": \"\",\n          \"date\": \"2018-07-03T17:00:00+03:00\",\n
+    \         \"stadium\": 3,\n          \"channels\": [\n            4,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 4\n        },\n
+    \       {\n          \"name\": 56,\n          \"type\": \"qualified\",\n          \"home_team\":
+    \"winner_h\",\n          \"away_team\": \"runner_g\",\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\":
+    \"\",\n          \"winner\": \"\",\n          \"date\": \"2018-07-03T21:00:00+03:00\",\n
+    \         \"stadium\": 2,\n          \"channels\": [\n            3,\n            6\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 4\n        }\n
+    \     ]\n    },\n    \"round_8\": {\n      \"name\": \"Quarter-finals\",\n      \"matches\":
+    [\n        {\n          \"name\": 57,\n          \"type\": \"winner\",\n          \"home_team\":
+    49,\n          \"away_team\": 50,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\": \"\",\n
+    \         \"winner\": \"\",\n          \"date\": \"2018-07-06T17:00:00+03:00\",\n
+    \         \"stadium\": 6,\n          \"channels\": [\n            3\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 5\n        },\n        {\n
+    \         \"name\": 58,\n          \"type\": \"winner\",\n          \"home_team\":
+    53,\n          \"away_team\": 54,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\": \"\",\n
+    \         \"winner\": \"\",\n          \"date\": \"2018-07-06T21:00:00+03:00\",\n
+    \         \"stadium\": 5,\n          \"channels\": [\n            3\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 5\n        },\n        {\n
+    \         \"name\": 59,\n          \"type\": \"winner\",\n          \"home_team\":
+    51,\n          \"away_team\": 52,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\": \"\",\n
+    \         \"winner\": \"\",\n          \"date\": \"2018-07-07T21:00:00+03:00\",\n
+    \         \"stadium\": 11,\n          \"channels\": [\n            4\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 5\n        },\n        {\n
+    \         \"name\": 60,\n          \"type\": \"winner\",\n          \"home_team\":
+    55,\n          \"away_team\": 56,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\": \"\",\n
+    \         \"winner\": \"\",\n          \"date\": \"2018-07-07T18:00:00+04:00\",\n
+    \         \"stadium\": 7,\n          \"channels\": [\n            4\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 5\n        }\n      ]\n
+    \   },\n    \"round_4\": {\n      \"name\": \"Semi-finals\",\n      \"matches\":
+    [\n        {\n          \"name\": 61,\n          \"type\": \"winner\",\n          \"home_team\":
+    57,\n          \"away_team\": 58,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\": \"\",\n
+    \         \"winner\": \"\",\n          \"date\": \"2018-07-10T21:00:00+03:00\",\n
+    \         \"stadium\": 3,\n          \"channels\": [\n            4\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 6\n        },\n        {\n
+    \         \"name\": 62,\n          \"type\": \"winner\",\n          \"home_team\":
+    59,\n          \"away_team\": 60,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\": \"\",\n
+    \         \"winner\": \"\",\n          \"date\": \"2018-07-11T21:00:00+03:00\",\n
+    \         \"stadium\": 1,\n          \"channels\": [\n            3\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 6\n        }\n      ]\n
+    \   },\n    \"round_2_loser\": {\n      \"name\": \"Third place play-off\",\n
+    \     \"matches\": [\n        {\n          \"name\": 63,\n          \"type\":
+    \"loser\",\n          \"home_team\": 61,\n          \"away_team\": 62,\n          \"home_result\":
+    \"\",\n          \"away_result\": \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\":
+    \"\",\n          \"winner\": \"\",\n          \"date\": \"2018-07-14T17:00:00+03:00\",\n
+    \         \"stadium\": 3,\n          \"channels\": [\n            4\n          ],\n
+    \         \"finished\": false,\n          \"matchday\": 7\n        }\n      ]\n
+    \   },\n    \"round_2\": {\n      \"name\": \"Final\",\n      \"matches\": [\n
+    \       {\n          \"name\": 64,\n          \"type\": \"winner\",\n          \"home_team\":
+    61,\n          \"away_team\": 62,\n          \"home_result\": \"\",\n          \"away_result\":
+    \"\",\n          \"home_penalty\": \"\",\n          \"away_penalty\": \"\",\n
+    \         \"winner\": \"\",\n          \"date\": \"2018-07-15T18:00:00+03:00\",\n
+    \         \"stadium\": 1,\n          \"channels\": [\n            3,\n            4\n
+    \         ],\n          \"finished\": false,\n          \"matchday\": 7\n        }\n
+    \     ]\n    }\n  }\n}"
+kind: ConfigMap
+metadata:
+  name: "game-data-matches"
+  namespace: "development"

@@ -4,8 +4,6 @@ import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
-import java.nio.file.Files
-import java.nio.file.Paths
 
 /**
  * @author claudioed on 24/05/18.
@@ -18,15 +16,13 @@ abstract class MultiNodesDataLoader<T> {
     abstract fun node(node: JsonNode):List<Pair<String,JsonNode>>
 
     fun data(): List<T> {
-        return parse(node(load("data.json")))
+        return parse(node(load()))
     }
 
     abstract fun parse(jsonNode: List<Pair<String,JsonNode>>): List<T>
 
-    private fun load(file: String): JsonNode {
-        val path = Paths.get(javaClass.classLoader
-                .getResource(file)!!.toURI())
-        return MAPPER.readTree(String(Files.readAllBytes(path)))
+    private fun load(): JsonNode {
+        return MAPPER.readTree(System.getenv("MATCHES"))
     }
 
 }
