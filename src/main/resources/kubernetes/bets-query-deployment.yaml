@@ -1,0 +1,69 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "bets-query"
+  labels:
+    app: "bets-query"
+data:
+  DATASTORE_URL: "mongodb-mongodb"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: "bets-query"
+  labels:
+    app: "bets-query"
+spec:
+  selector:
+    app: "bets-query"
+  ports:
+  - name: http
+    port: 8000
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "bets-query"
+  labels:
+    app: "bets-query"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "bets-query"
+        tier: backend
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: "bets-query"
+        image: "gcr.io/sensedia-bet/bets-query"
+        env:
+        - name: DATASTORE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: "bets-query"
+              key: DATASTORE_URL
+        ports:
+        - name: http
+          containerPort: 7777
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: http
+            scheme: HTTP
+          initialDelaySeconds: 50
+          periodSeconds: 20
+          successThreshold: 1
+          timeoutSeconds: 30
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: http
+            scheme: HTTP
+          initialDelaySeconds: 50
+          periodSeconds: 20
+          successThreshold: 1
+          timeoutSeconds: 30
