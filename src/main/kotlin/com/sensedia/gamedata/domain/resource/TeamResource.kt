@@ -1,10 +1,8 @@
 package com.sensedia.gamedata.domain.resource
 
 import com.sensedia.gamedata.domain.service.TeamService
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.slf4j.LoggerFactory
+import org.springframework.web.bind.annotation.*
 
 /**
  * @author claudioed on 26/05/18.
@@ -14,7 +12,11 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api/teams")
 class TeamResource(private val teamService: TeamService) {
 
+    private val log = LoggerFactory.getLogger(TeamResource::class.java)
+
     @GetMapping("/{id}")
-    fun get(@PathVariable("id")id:String)= this.teamService.get(id)
+    fun get(@PathVariable("id")id:String,@RequestHeader("api-key") apiKey: String)= this.teamService.get(id).doOnNext {
+        log.info("Found team by ID $id . API-KEY $apiKey ")
+    }
 
 }

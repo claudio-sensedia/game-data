@@ -1,9 +1,6 @@
 package com.sensedia.gamedata.domain.service
 
-import com.sensedia.gamedata.domain.Match
-import com.sensedia.gamedata.domain.MatchData
-import com.sensedia.gamedata.domain.MatchResult
-import com.sensedia.gamedata.domain.Result
+import com.sensedia.gamedata.domain.*
 import com.sensedia.gamedata.domain.repository.MatchRepository
 import com.sensedia.gamedata.domain.repository.TeamRepository
 import com.sensedia.gamedata.infra.rabbit.MessageConf
@@ -58,6 +55,14 @@ class MatchService(private val matchRepository: MatchRepository, private val tea
         }.flatMap {
             this.sender.send(Triple(this.messageConf.matchExchange, this.messageConf.matchResultQueue, MatchResult(name = it.name, homeResult = it.homeResult, awayResult = it.awayResult)))
             Mono.just(it)
+        }
+    }
+
+    fun changePlayers(name: String, players: MatchPlayers): Mono<Match> {
+        return this.matchRepository.findById(name).map {
+            it.copy(homeTeam = players.homeTeam, awayTeam = players.awayTeam,finished = false)
+        }.flatMap {
+            this.matchRepository.save(it)
         }
     }
 
