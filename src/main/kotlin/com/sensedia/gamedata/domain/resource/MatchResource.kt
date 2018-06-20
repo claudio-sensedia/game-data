@@ -24,7 +24,7 @@ class MatchResource(private val matchService: MatchService) {
                 @RequestHeader("x-b3-sampled", required = false) xsampled: String,
                 @RequestHeader("x-b3-flags", required = false) xflags: String,
                 @RequestHeader("x-ot-span-context", required = false) xotspan: String) = this.matchService.matches().doOnNext {
-        log.info("Found all matches")
+        log.info("Found all matches. HEADERS: $xreq $xtraceid $xspanid $xparentspanid $xsampled $xflags $xotspan")
     }
 
     @GetMapping("/{id}")
@@ -34,9 +34,12 @@ class MatchResource(private val matchService: MatchService) {
             @RequestHeader("x-b3-parentspanid", required = false) xparentspanid: String,
             @RequestHeader("x-b3-sampled", required = false) xsampled: String,
             @RequestHeader("x-b3-flags", required = false) xflags: String,
-            @RequestHeader("x-ot-span-context", required = false) xotspan: String) = this.matchService.get(id)
-    fun get(@PathVariable("id") id: String, @RequestHeader("api-key") apiKey: String) = this.matchService.get(id).doOnNext {
-        log.info("Found match by ID $id . API-KEY $apiKey ")
+            @RequestHeader("x-ot-span-context", required = false) xotspan: String,
+            @RequestHeader("api-key",required = false) apiKey: String) {
+        this.matchService.get(id).doOnNext {
+            log.info("Found match by ID $id . API-KEY $apiKey  HEADERS: $xreq $xtraceid $xspanid $xparentspanid $xsampled $xflags $xotspan")
+
+        }
     }
 
     @PutMapping("/{id}")
@@ -47,7 +50,7 @@ class MatchResource(private val matchService: MatchService) {
                @RequestHeader("x-b3-sampled", required = false) xsampled: String,
                @RequestHeader("x-b3-flags", required = false) xflags: String,
                @RequestHeader("x-ot-span-context", required = false) xotspan: String) = this.matchService.changeResult(id, result).doOnNext {
-        log.info("Applying match result Match $id Home Team ${result.homeResult} Away Team ${result.awayResult}")
+        log.info("Applying match result Match $id Home Team ${result.homeResult} Away Team ${result.awayResult} HEADERS: $xreq $xtraceid $xspanid $xparentspanid $xsampled $xflags $xotspan")
     }
 
     @PutMapping("/{id}/teams")
