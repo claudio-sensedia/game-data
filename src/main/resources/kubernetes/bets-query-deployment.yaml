@@ -37,7 +37,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: "bets-query"
-        image: "gcr.io/sensedia-bet/bets-query"
+        image: "gcr.io/sensedia-bet/bets-query:latest"
         env:
         - name: DATASTORE_URL
           valueFrom:
@@ -46,11 +46,11 @@ spec:
               key: DATASTORE_URL
         ports:
         - name: http
-          containerPort: 7777
+          containerPort: 8000
         readinessProbe:
           failureThreshold: 3
           httpGet:
-            path: /
+            path: /healthcheck
             port: http
             scheme: HTTP
           initialDelaySeconds: 50
@@ -60,7 +60,7 @@ spec:
         livenessProbe:
           failureThreshold: 3
           httpGet:
-            path: /
+            path: /healthcheck
             port: http
             scheme: HTTP
           initialDelaySeconds: 50

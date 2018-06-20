@@ -13,12 +13,30 @@ import org.springframework.web.bind.annotation.*
 class MatchResource(private val matchService: MatchService) {
 
     @GetMapping
-    fun matches() = this.matchService.matches()
+    fun matches(@RequestHeader("x-request-id", required = false) xreq: String,
+                @RequestHeader("x-b3-traceid", required = false) xtraceid: String,
+                @RequestHeader("x-b3-spanid", required = false) xspanid: String,
+                @RequestHeader("x-b3-parentspanid", required = false) xparentspanid: String,
+                @RequestHeader("x-b3-sampled", required = false) xsampled: String,
+                @RequestHeader("x-b3-flags", required = false) xflags: String,
+                @RequestHeader("x-ot-span-context", required = false) xotspan: String) = this.matchService.matches()
 
     @GetMapping("/{id}")
-    fun get(@PathVariable("id") id: String) = this.matchService.get(id)
+    fun get(@PathVariable("id") id: String, @RequestHeader("x-request-id", required = false) xreq: String,
+            @RequestHeader("x-b3-traceid", required = false) xtraceid: String,
+            @RequestHeader("x-b3-spanid", required = false) xspanid: String,
+            @RequestHeader("x-b3-parentspanid", required = false) xparentspanid: String,
+            @RequestHeader("x-b3-sampled", required = false) xsampled: String,
+            @RequestHeader("x-b3-flags", required = false) xflags: String,
+            @RequestHeader("x-ot-span-context", required = false) xotspan: String) = this.matchService.get(id)
 
     @PutMapping("/{id}")
-    fun result(@PathVariable("id") id: String, @RequestBody result: Result) = this.matchService.changeResult(id, result)
+    fun result(@PathVariable("id") id: String, @RequestBody result: Result, @RequestHeader("x-request-id", required = false) xreq: String,
+               @RequestHeader("x-b3-traceid", required = false) xtraceid: String,
+               @RequestHeader("x-b3-spanid", required = false) xspanid: String,
+               @RequestHeader("x-b3-parentspanid", required = false) xparentspanid: String,
+               @RequestHeader("x-b3-sampled", required = false) xsampled: String,
+               @RequestHeader("x-b3-flags", required = false) xflags: String,
+               @RequestHeader("x-ot-span-context", required = false) xotspan: String) = this.matchService.changeResult(id, result)
 
 }
