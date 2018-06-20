@@ -17,3 +17,7 @@ match:
   result:
     queue: result
     key: result
+
+logging:
+  level:
+    root: INFO
