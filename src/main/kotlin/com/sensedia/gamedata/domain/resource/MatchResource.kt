@@ -35,12 +35,10 @@ class MatchResource(private val matchService: MatchService) {
             @RequestHeader("x-b3-sampled", required = false) xsampled: String,
             @RequestHeader("x-b3-flags", required = false) xflags: String,
             @RequestHeader("x-ot-span-context", required = false) xotspan: String,
-            @RequestHeader("api-key",required = false) apiKey: String) {
-        this.matchService.get(id).doOnNext {
-            log.info("Found match by ID $id . API-KEY $apiKey  HEADERS: $xreq $xtraceid $xspanid $xparentspanid $xsampled $xflags $xotspan")
-
-        }
-    }
+            @RequestHeader("api-key", required = false) apiKey: String) =
+            this.matchService.get(id).doOnNext {
+                log.info("Found match by ID $id . API-KEY $apiKey  HEADERS: $xreq $xtraceid $xspanid $xparentspanid $xsampled $xflags $xotspan")
+            }
 
     @PutMapping("/{id}")
     fun result(@PathVariable("id") id: String, @RequestBody result: Result, @RequestHeader("x-request-id", required = false) xreq: String,
